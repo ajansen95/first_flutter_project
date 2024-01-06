@@ -9,26 +9,28 @@ class FavoritesPage extends StatelessWidget {
     var appState = context.watch<MyAppState>();
 
     return SafeArea(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text("You have ${appState.favorites.length} favorites"),
-          ),
-      
-          for (var favorite in appState.favorites )
-          Card(
-            child: ListTile(
-              leading: Icon(Icons.favorite),
-              title: Text(favorite.asLowerCase),
-              onTap: () {
-                appState.removeFavorite(favorite);
-              },
+      child: ListView(
+        children: [Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("You have ${appState.favorites.length} favorites"),
             ),
-          ),
-      
-        ],
+
+            for (var favorite in appState.favorites )
+            Card(
+              child: ListTile(
+                leading: Icon(Icons.favorite),
+                title: Text(favorite.asLowerCase),
+                onTap: () {
+                  appState.removeFavorite(favorite);
+                },
+              ),
+            ),
+
+          ],
+        ),]
       ),
     );
   }
