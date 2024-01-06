@@ -1,13 +1,12 @@
+import 'package:first_flutter_project/pages/FavoritesPage.dart';
 import 'package:first_flutter_project/state/MyAppState.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'pages/GeneratorPage.dart';
 
-
 void main() {
   runApp(MyApp());
 }
-
 
 
 class MyApp extends StatelessWidget {
@@ -48,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
       case 0:
         page = GeneratorPage();
       case 1:
-        page = Placeholder();
+        page = FavoritesPage();
       default:
         throw UnimplementedError('no widget for $selectedIndex');
     }

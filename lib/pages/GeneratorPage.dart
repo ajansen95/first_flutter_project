@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class GeneratorPage extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     var appState = context.watch<MyAppState>();
@@ -27,7 +28,7 @@ class GeneratorPage extends StatelessWidget {
             children: [
               ElevatedButton.icon(
                 onPressed: () {
-                  appState.toggleFavorite();
+                  appState.toggleCurrentFavorite();
                 },
                 icon: Icon(icon),
                 label: Text('Like'),
