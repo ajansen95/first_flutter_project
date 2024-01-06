@@ -1,5 +1,5 @@
-import 'package:first_flutter_project/state/MyAppState.dart';
-import 'package:first_flutter_project/components/BigCard.dart';
+import 'package:first_flutter_project/state/my_app_state.dart';
+import 'package:first_flutter_project/components/big_card.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

@@ -1,8 +1,8 @@
-import 'package:first_flutter_project/pages/FavoritesPage.dart';
-import 'package:first_flutter_project/state/MyAppState.dart';
+import 'package:first_flutter_project/pages/favorites_page.dart';
+import 'package:first_flutter_project/state/my_app_state.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'pages/GeneratorPage.dart';
+import 'pages/generator_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => MyAppState(),
       child: MaterialApp(
-        title: 'Namer App',
+        title: 'Name App',
         theme: ThemeData(
           useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
